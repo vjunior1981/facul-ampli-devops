@@ -29,16 +29,16 @@
 
 - A figura -- Exemplo de aplicação de algoritmos --, ilustra um exemplo de aplicação desse tipo de abordagem. Imagine que você está no ponto azul e quer chegar ao vermelho: você terá algumas alternativas de rota, e o programa fará a escolha conforme os critérios estabelecidos por você.
 
-![image-20220605140917971](./introducao_aos_algoritmos.assets/image-20220605140917971.png)
+![image-20220605140917971](./01-introducao_aos_algoritmos.assets/image-20220605140917971.png)
 
 - Berg e Figueiró (1998) descrevem algoritmos como uma sequência ordenada de passos que deve ser seguida para atingir um objetivo.
 - Conforme mencionado, para qualquer tarefa a ser executada no dia a dia podemos desenvolver um algoritmo. Como exemplo, tomemos a sequência de passos para o cozimento de arroz, que pode ser a seguinte:
 
-![image-20220605141105936](./introducao_aos_algoritmos.assets/image-20220605141105936.png)
+![image-20220605141105936](./01-introducao_aos_algoritmos.assets/image-20220605141105936.png)
 
 - Para melhor entendimento dos algoritmos é necessário dividi-los em três partes:
 
-![image-20220605141139441](./introducao_aos_algoritmos.assets/image-20220605141139441.png)
+![image-20220605141139441](./01-introducao_aos_algoritmos.assets/image-20220605141139441.png)
 
 - Exercitando lógica e algoritmos: Veja se consegue completar todos os desafios do jogo "[Labirinto](https://blockly.games/maze?lang=pt-br#ue6x7c)".
 
@@ -51,7 +51,7 @@
 - Segundo Santos (2001), a linguagem natural é uma forma de comunicação entre as pessoas de diversas línguas, que pode ser falada, escrita ou gesticulada, entre outras formas de comunicação.
 - Para reforçar esse conceito, podemos considerar o cadastro das notas dos alunos de um curso.
 
-![image-20220605141653469](./introducao_aos_algoritmos.assets/image-20220605141653469.png)
+![image-20220605141653469](./01-introducao_aos_algoritmos.assets/image-20220605141653469.png)
 
 ---
 
@@ -62,11 +62,11 @@
 - Segundo Manzano, Franco e Villar (2015), podemos caracterizar diagrama de blocos como um conjunto de símbolos gráficos, em que cada um desses símbolos representa ações específicas a serem executadas pelo computador. 
 - O quadro a seguir mostra os principais símbolos utilizados para se descrever um algoritmo.
 
-![image-20220605141834928](./introducao_aos_algoritmos.assets/image-20220605141834928.png)
+![image-20220605141834928](./01-introducao_aos_algoritmos.assets/image-20220605141834928.png)
 
 - A figura -- Diagrama de blocos (fluxograma) --, ilustra o diagrama com o algoritmo descrito em linguagem natural, que calcula a média de notas e a situação de um aluno, representado por meio de um diagrama de blocos.
 
-![image-20220605141918842](./introducao_aos_algoritmos.assets/image-20220605141918842.png)
+![image-20220605141918842](./01-introducao_aos_algoritmos.assets/image-20220605141918842.png)
 
 - Algumas dicas para construir um diagrama de blocos (fluxograma) são as seguintes:
   - estar atento à sequência das instruções.
@@ -74,14 +74,14 @@
   - ficar atento para não cruzar as linhas dos fluxos.
 - Outro exemplo que podemos destacar é a operação em um caixa eletrônico.
 
-![image-20220605142037800](./introducao_aos_algoritmos.assets/image-20220605142037800.png)
+![image-20220605142037800](./01-introducao_aos_algoritmos.assets/image-20220605142037800.png)
 
-![image-20220605142100880](./introducao_aos_algoritmos.assets/image-20220605142100880.png)
+![image-20220605142100880](./01-introducao_aos_algoritmos.assets/image-20220605142100880.png)
 
 - Ainda a respeito do exemplo da figura -- Fluxograma de operação de caixa eletrônico --, para que o fluxograma não fique muito extenso, dificultando seu entendimento, você pode tratar cada operação bancária em um fluxograma à parte.
 - A figura ilustra o exemplo de fluxograma que trata da operação de saque em um sistema bancário.
 
-![image-20220605142839632](./introducao_aos_algoritmos.assets/image-20220605142839632.png)
+![image-20220605142839632](./01-introducao_aos_algoritmos.assets/image-20220605142839632.png)
 
 - Observando o fluxograma que representa a operação de saque em um sistema bancário, apresentado na figura -- Fluxograma da operação de saque --, como você alteraria o fluxograma para que o usuário possa escolher informar ou não um novo valor, caso o valor atualmente informado por ele seja inválido (ou seja, exceda o limite máximo ou seja maior do que o saldo atual do cliente)?
 
@@ -194,7 +194,7 @@ Fimalgoritmo
 - A Linguagem de Programação (LP) pode ser entendida como um conjunto de palavras (vocabulário) e um conjunto de regras gramaticais (para relacionar essas palavras) usados para instruir o sistema de computação a realizar tarefas específicas e, com isso, criar os programas.
 - Segundo Tucker (2010), um paradigma de programação está relacionado a um padrão de soluções de problemas, os quais, por sua vez, estão relacionados a uma determinada linguagem de programação. Ainda segundo o autor, quatro paradigmas de programação tiveram sua evolução reconhecida nas últimas décadas:
 
-![image-20220605150004015](./introducao_aos_algoritmos.assets/image-20220605150004015.png)
+![image-20220605150004015](./01-introducao_aos_algoritmos.assets/image-20220605150004015.png)
 
 ---
 
@@ -249,7 +249,7 @@ Fimalgoritmo
 - criado usando o [app.creately.com](app.creately.com)
 - nome do arquivo: `introducao-aos-algoritmos-locadora-feature-1`
 
-![image-20220605153348761](./introducao_aos_algoritmos.assets/image-20220605153348761.png)
+![image-20220605153348761](./01-introducao_aos_algoritmos.assets/image-20220605153348761.png)
 
 ---
 
