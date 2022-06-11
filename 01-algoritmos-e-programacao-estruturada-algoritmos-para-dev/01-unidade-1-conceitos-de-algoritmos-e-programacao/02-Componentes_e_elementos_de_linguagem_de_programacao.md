@@ -85,11 +85,25 @@ int main(){
 
 - Vamos utilizar a ferramenta Paiza.io para testar as declarações das variáveis e a impressão de cada uma delas.
 
-> Nota particular: em vez de utilizar a ferramenta sugerida, eu utilizei o [replit.com](replit.com)
+```c
+#include <stdio.h>
 
-![image-20220606164151708](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220606164151708.png)
+int main() {
+  int idade = 18;
+  float salario = 1250.75;
+  double porcentagem_desconto = 2.5;
+  char genero = 'F';
+  float altura = 1.63;
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-impressao-de-variaveis?v=1).
+  printf("\n Idade: %d", idade);
+  printf("\n Salário: %f", salario);
+  printf("\n Desconto (%): %f", porcentagem_desconto);
+  printf("\n Gênero: %c", genero);
+  printf("\n Altura: %.3f", altura);
+  printf("\n");
+  return 0;
+}
+```
 
 ---
 
@@ -109,15 +123,60 @@ int main(){
 
 - Exemplo de código que armazena duas variáveis informadas:
 
-![image-20220606164217670](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220606164217670.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-impressao-variaveis-informadas?v=1).
+int main() {
+  float valor1 = 0, valor2 = 0;
+
+  printf("\n Digite o primeiro valor..: ");
+  scanf("%f", &valor1);
+  printf("\n Digite o segundo valor...: ");
+  scanf("%f", &valor2);
+  printf("\n Variável 1 = %.2f", valor1);
+  printf("\n Variável 2 = %.2f\n", valor2);
+  return 0;
+}
+```
 
 - Para impressão do endereço da variável é necessário utilizar o operador `&` junto do especificador de formato `"%p"`:
 
-![image-20220606165043293](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220606165043293.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-impressao-endereco-memoria-variavel?v=1).
+int main(void) {
+  // declare variables
+  int a;
+  float b;
+  char c;
+
+  printf("Address of a: %p\n", &a);
+  printf("Address of b: %p\n", &b);
+  printf("Address of c: %p\n", &c);
+
+  return 0;
+}
+```
+
+- Impressão de variáveis recebidas
+
+```c
+#include <stdio.h>
+
+int main(void) {
+  // declare variables
+  int a;
+  float b;
+  char c;
+
+  printf("Address of a: %p\n", &a);
+  printf("Address of b: %p\n", &b);
+  printf("Address of c: %p\n", &c);
+
+  return 0;
+}
+```
+
 - Declara-se uma constante utilizando a diretiva `#define`, logo após a inclusão das bibliotecas. Ex:
 
 ```c
@@ -134,9 +193,20 @@ int main(){
 
 - Dessa forma, quando declara a constante ela utilizará espaço na memória, de acordo com cada tipo de dado.
 
-![image-20220611150533779](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611150533779.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-criacao-de-constantes?v=1).
+#define PI 3.14
+
+int main() {
+  const float G = 9.80;
+
+  printf("\n PI = %f", PI);
+  printf("\n G  = %f\n", G);
+
+  return 0;
+}
+```
 
 ---
 
@@ -167,15 +237,40 @@ int main(){
 
 - Vamos criar um vetor em C para armazenar a altura (em metros) de 3 pessoas. Veja no código – Inicializando um vetor utilizando operador chaves ({ }), que, na linha 3, foi criado o vetor *altura*, que foi inicializado com valores. Para armazenar valores no vetor no momento da criação, colocamos os elementos entre chaves ({ }) separados por vírgula. Da linha 4 a 6 é feita a impressão dos valores guardados no vetor *altura*.
 
-![image-20220611151748204](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611151748204.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-exemplo-vetor?v=1).
+int main() {
+  float altura[3] = {1, 1.5, 1.7};
+
+  printf("\n Exemplo 1:\n");
+  printf("\n Vetor altura[0] = %f", altura[0]);
+  printf("\n Vetor altura[1] = %f", altura[1]);
+  printf("\n Vetor altura[2] = %f\n", altura[2]);
+
+  return 0;
+}
+```
 
 * Também é possível declarar o vetor e seus valores conforme a forma abaixo:
 
-![image-20220611152217987](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611152217987.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-exemplo-vetor-1?v=1).
+int main() {
+  float altura[3];
+  altura[0] = 1.50;
+  altura[1] = 1.80;
+  altura[2] = 2.02;
+
+  printf("\n Exemplo 2:\n");
+  printf("\n Vetor altura[0] = %f", altura[0]);
+  printf("\n Vetor altura[1] = %f", altura[1]);
+  printf("\n Vetor altura[2] = %f\n", altura[2]);
+
+  return 0;
+}
+```
 
 - Para ajudar a compreensão, observe a figura a seguir, que representa um esquema para um vetor denominado *idade* na memória do computador. O valor do vetor depende da posição, ou seja, do índice.
 
@@ -191,9 +286,25 @@ scanf("%d",&idade[0]);
 
 - Exemplo de leitura de vetor:
 
-![image-20220611154111297](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611154111297.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-exemplo-leitura-vetor?v=1).
+int main(void) {
+  int idade[3] = {0, 0, 0};
+  float media = 0.0;
+
+  printf("\n Informe a idade da pessoa 1: ");
+  scanf("%d", &idade[0]);
+  printf("\n Informe a idade da pessoa 2: ");
+  scanf("%d", &idade[1]);
+  printf("\n Informe a idade da pessoa 3: ");
+  scanf("%d", &idade[2]);
+  media = (idade[0] + idade[1] + idade[2]) / 3;
+  printf("\n Média de idade = %.2f\n", media);
+
+  return 0;
+}
+```
 
 ---
 
@@ -283,9 +394,27 @@ matriz[M][N] = valor;
 - **M** representa a linha que se pretende armazenar e **N**, a coluna. Assim como nos vetores, aqui os índices sempre iniciarão em zero.
 - Vamos criar uma matriz em *C* para armazenar as notas do primeiro e segundo bimestre de três alunos. Veja, na linha 3 do código - Matriz em *C -*, que criamos uma matriz chamada notas, com 3 linhas e 2 colunas, o que significa que serão armazenados 6 valores (linhas x colunas).
 
-![image-20220611155824731](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611155824731.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-criacao-de-constantes?v=1).).
+int main() {
+
+  float notas[3][2];
+
+  // aluno 1
+  notas[0][0] = 10;
+  notas[0][1] = 8.5;
+
+  // aluno 2
+  notas[1][0] = 5.5;
+  notas[1][1] = 2.7;
+
+  // aluno 3
+  notas[2][0] = 4;
+  notas[2][1] = 10;
+  return 0;
+}
+```
 
 - A figura a seguir ilustra a estrutura de dados que é criada na memória para o código do código - Matriz em C. Veja que as linhas foram usadas para representar os alunos e as colunas para as notas.
 
@@ -327,9 +456,30 @@ struct <nome>{
 
 - Vamos criar uma estrutura para armazenar o modelo, o ano e o valor de um automóvel. No código - *Struct* em C, “*Struct* em C”, a estrutura automóvel foi criada entre as linhas 3 e 7. Mas, para utilizar essa estrutura, na linha 10 foi criada a variável dadosAutomovel1, que é do tipo *struct* automovel.
 
-![image-20220611161219279](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611161219279.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-var-struct?v=1).
+struct automovel {
+  char modelo[20];
+  int ano;
+  float valor;
+};
+
+int main() {
+  struct automovel dadosAutomovel1;
+  printf("\n Digite o modelo do automovel: ");
+  scanf("%s", dadosAutomovel1.modelo);
+  printf("\n Digite o ano do automovel: ");
+  scanf("%d", &dadosAutomovel1.ano);
+  printf("\n Digite o valor do automovel: ");
+  scanf("%f", &dadosAutomovel1.valor);
+
+  printf("\n Dados atribuidos");
+  printf("\n %s", dadosAutomovel1.modelo);
+  printf("\n %d", dadosAutomovel1.ano);
+  printf("\n %f\n", dadosAutomovel1.valor);
+}
+```
 
 ---
 
@@ -374,7 +524,18 @@ printf("\n Endereco do ponteiro: %p", &ponteiro_para_ano);
 
 - O nome de um vetor nada mais é do que um ponteiro para o endereço de memória do seu primeiro elemento.
 
-![image-20220611162904714](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611162904714.png)
+```c
+#include <stdio.h>
+
+int main() {
+  int num[2] = {10, 20};
+
+  printf("\n Utilizando índice do vetor: %d", num[0]);
+  printf("\n Utilizando ponteiro: %d\n", *num);
+
+  return 0;
+}
+```
 
 - Link para essa solução no replit.com [aqui](Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-criacao-de-constantes?v=1).
 
@@ -411,6 +572,32 @@ printf("\n Endereco do ponteiro: %p", &ponteiro_para_ano);
 - Podemos usar, também, o conceito de constante para armazenar o tamanho da string que armazenará o nome do cliente. Para armazenar a classificação do filme, basta uma variável primitiva do tipo inteiro.
 - Quanto ao processo de leitura e impressão dos valores dessas variáveis, deve-se estar atento ao uso do operador ponto (.) para acessar campos de um *struct*. Também é importante lembrar-se do uso das funções `fflush()` e `fgets()` para leitura de *strings*.
 
-![image-20220611164556271](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611164556271.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-conclusao-cliente?v=1).
+#define TAM_NOME_CLIENTE 100
+
+struct cliente {
+  char nome[TAM_NOME_CLIENTE];
+  int idade;
+};
+
+int main(void) {
+  struct cliente cli;
+  int classificacao_filme;
+
+  printf("\n Informe o nome do cliente: ");
+  fflush(stdin);
+  fgets(cli.nome, TAM_NOME_CLIENTE, stdin);
+
+  printf("\n Informe a idade do cliente: ");
+  scanf("%d", &cli.idade);
+
+  printf("\n Informe a classificação do filme: ");
+  scanf("%d", &classificacao_filme);
+
+  printf("\n Cliente: %s", cli.nome);
+  printf("\n Idade: %d anos\n", cli.idade);
+  printf("\n Classificação do filme: %d anos\n", classificacao_filme);
+}
+```

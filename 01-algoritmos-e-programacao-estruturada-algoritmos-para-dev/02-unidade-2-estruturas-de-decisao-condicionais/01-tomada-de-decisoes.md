@@ -43,9 +43,20 @@ if <(condição)> {
 
 - Veja no exemplo que segue a situação de um jovem que verifica se poderá ou não tirar a carteira de habilitação:
 
-![image-20220611184048508](./01-tomada-de-decisoes.assets/image-20220611184048508.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-estrutura-condicional-tirar-carteira?v=1).
+int main() {
+  int idade;
+  printf("\n Digite sua idade: ");
+  scanf("%d", &idade);
+  if (idade >= 18) {
+    printf("\n Você já pode tirar sua carteira de Habilitação, você tem 18 ou mais anos!\n");
+  }
+  return 0;
+}
+```
+
 - Agora, veremos a seguir, a **estrutura condicional composta**, que completa a nossa condição inicial com o comando else, que significa “se não”. Vejamos como fica a estrutura no fluxograma da figura - Fluxograma representando as funções *if* e *else*:
 
 ![image-20220611184239872](./01-tomada-de-decisoes.assets/image-20220611184239872.png)
@@ -62,11 +73,24 @@ if <(condição)> {
 
 - Vamos, agora, criar outra situação para a estrutura condicional composta em linguagem *C*: Maria e João estão se preparando para uma viagem. Se o orçamento final deles for igual ou maior a R$ 10.000 eles farão uma viagem internacional; caso contrário, deverão fazer uma viagem nacional.
 
-![image-20220611184724476](./01-tomada-de-decisoes.assets/image-20220611184724476.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-estrutura-condicional-composta?v=1).
+int main() {
+  float orcamento;
+  printf("\n Digite o valor do orcamento para viagem \n");
+  scanf("%f", &orcamento);
+  if (orcamento >= 10000) {
+    printf("\n João e Maria possuem orçamento para uma viagem internacional\n");
+  } else {
+    printf("\n João e Maria irão optar por uma viagem nacional\n");
+  }
+  return 0;
+}
+```
 
 - Para reforçar o seu conhecimento, vamos ver o exemplo que segue em linguagem de programação *C*, que retorna se o valor de um número digitado é par ou ímpar, representando uma estrutura condicional composta. Além disso, aplicaremos o operador aritmético módulo (%).
+
 
 ```c
 #include <stdio.h>
@@ -125,11 +149,38 @@ default: <comandos>
 
 - Que tal colocar em prática o uso da estrutura condicional *switch-case* com esse exemplo? O código a seguir traduz o fluxograma anterior para a linguagem de programação *C*.
 
-![image-20220611185711768](./01-tomada-de-decisoes.assets/image-20220611185711768.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-condicional-selecao-casos-case-switch?v=1).
+int main(void){
+    int n;
+    
+    printf("\n(1) para Saldo\n(2) para Extrato\n(3) para Saque\n(4) para Sair\n");
+    printf("\nInforme a operação desejada: ");
+    
+    scanf("%d", &n);
+    
+    switch(n) {
+        case 1: 
+            printf("\nSaldo\n");
+            break;
+        case 2: 
+            printf("\nExtrato\n");
+            break;
+        case 3: 
+            printf("\nSaque\n");
+            break;
+        case 4: 
+            printf("\nSair\n");
+            break;
+        default:
+            printf("\nInválido\n");
+    }
+}
+```
 
 - Para fixar o que está sendo estudado, vamos aplicar, a seguir, um exemplo cuja finalidade é descobrir o desconto que um cliente terá, de acordo com a escolha de uma cor específica marcada em cada produto:
+
 
 ```c
 #include <stdio.h>

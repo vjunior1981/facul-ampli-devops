@@ -32,9 +32,22 @@ Classificação do filme: 12 anos
 
 - Vamos criar um programa em *C* que some a idade de duas pessoas e imprima na tela o resultado. No código – Soma da idade de duas pessoas –, está o código que realiza tal processo.
 
-![image-20220611170450674](./03-Operacoes_e_expressoes.assets/image-20220611170450674.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-operacoes-expressoes?v=1).
+int main() {
+  int idade1 = 0;
+  int idade2 = 0;
+  int resultado = 0;
+  printf("\n Digite a primeira idade: ");
+  scanf("%d", &idade1);
+  printf("\n Digite a segunda idade: ");
+  scanf("%d", &idade2);
+  resultado = idade1 + idade2;
+  printf("\n Resultado = %d\n", resultado);
+}
+```
+
 - Quando trabalhamos com operadores, a **ordem de precedência** é muito importante. Segundo Soffner (2013), os operadores aritméticos apresentam a seguinte ordem de execução:
 
 ![image-20220611170535134](./03-Operacoes_e_expressoes.assets/image-20220611170535134.png)
@@ -74,9 +87,21 @@ int main() {
 
 - Exemplo de código com implemento pré e pós variável. Repare nas linhas "Resultado" o valor do output:
 
-![image-20220611171918538](./03-Operacoes_e_expressoes.assets/image-20220611171918538.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-operadores-unarios?v=1).
+int main(void) {
+  int x = 0;
+  int resultado_x = x++;
+  printf("\n Resultado = %d", resultado_x);
+  printf("\n X = %d", x);
+
+  int y = 0;
+  int resultado_y = ++y;
+  printf("\n Resultado = %d", resultado_y);
+  printf("\n Y = %d\n", y);
+}
+```
 
 ---
 
@@ -91,9 +116,21 @@ int main() {
 - Os operadores relacionais são usados para construir expressões booleanas, ou seja, expressões que terão como resultado verdadeiro (valor 1) ou falso (valor 0).
 - Vamos criar um programa que solicita ao usuário dois números inteiros e faz algumas comparações com esses valores. Veja, no código - Comparações entre dois números -, que na linha 9 comparamos se os números são iguais; na linha 10, se o primeiro (n1) é maior que o segundo (n2) e, na linha 11, se o primeiro é menor ou igual ao segundo.
 
-![image-20220611172544509](./03-Operacoes_e_expressoes.assets/image-20220611172544509.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-operacoes-relacionais?v=1).
+int main() {
+  int n1 = 0;
+  int n2 = 0;
+  printf("\n Digite o primeiro numero: ");
+  scanf("%d", &n1);
+  printf("\n Digite o segundo numero: ");
+  scanf("%d", &n2);
+  printf("\n n1 e n2 sao iguais? %d", n1 == n2);
+  printf("\n n1 e maior que n2? %d", n1 > n2);
+  printf("\n n1 e menor ou igual a n2? %d\n", n1 <= n2);
+}
+```
 
 ---
 
@@ -107,9 +144,16 @@ int main() {
 
 - Veja, no código – Operadores relacionais e lógicos –, o uso dos operadores relacionais e lógicos aplicados à comparação dos valores de três variáveis.
 
-![image-20220611173138564](./03-Operacoes_e_expressoes.assets/image-20220611173138564.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-operacoes-logicos?v=1).
+int main() {
+  int a = 5, b = 149, c = 15;
+  printf("\n (a == b) && (a == c) = %d", ((a == b) && (a == c)));
+  printf("\n (a == b) || (a == ¢) = %d", ((a == b) || (a == c)));
+  printf("\n !(a == b) || (a == c) = %d\n", !((a == b) || (a == c)));
+}
+```
 
 ---
 
@@ -130,9 +174,16 @@ int main() {
   - caso o primeiro caractere de ambas as *strings* seja igual, as duas regras anteriores são aplicadas para o próximo caractere, e assim sucessivamente.
 - Observe o uso da função *strcmp* no código a seguir.
 
-![image-20220611173642902](./03-Operacoes_e_expressoes.assets/image-20220611173642902.png)
+```c
+#include <stdio.h>
+#include <string.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-funcoes-predefinidas?v=1).
+int main(void) {
+  printf("\n ARARA == ARARA? %d", strcmp("ARARA", "ARARA"));
+  printf("\n ARARA == BANANA? %d", strcmp("ARARA", "BANANA"));
+  printf("\n BANANA == ARARA? %d\n", strcmp("BANANA", "ARARA"));
+}
+```
 
 ---
 
@@ -173,8 +224,6 @@ int main(void) {
 
 ```
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-conclusao-cliente?v=1).
-
 - Uma das novas funcionalidades propostas por seu chefe é que o programa informe ao cliente se o filme desejado está disponível para ser locado ou não. Nós já temos uma informação a respeito do filme, que é sua classificação. Então, para que nosso código fique organizado, vamos criar uma *struct* denominada Filme, assim como fizemos com o cliente.
 
 ```c
@@ -202,7 +251,46 @@ struct filme {
 
 - O resultado dessa expressão será um número inteiro, que responde à seguinte pergunta: “quantos anos faltam para que a classificação do filme seja adequada à faixa etária do cliente?”.
 
-![image-20220611180202282](./03-Operacoes_e_expressoes.assets/image-20220611180202282.png)
+```c
+#include <stdio.h>
 
-- Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-conclusao-cliente-1?v=1).
+#define TAM_NOME_CLIENTE 100
 
+struct cliente {
+  char nome[TAM_NOME_CLIENTE];
+  int idade;
+};
+
+struct filme {
+  int classificacao_filme;
+  int esta_disponivel;
+};
+
+int main(void) {
+  struct cliente cli;
+  struct filme fi;
+
+  printf("\n Informe o nome do cliente: ");
+  fflush(stdin);
+  fgets(cli.nome, TAM_NOME_CLIENTE, stdin);
+
+  printf("\n Informe a idade do cliente: ");
+  scanf("%d", &cli.idade);
+
+  printf("\n Informe a classificação do filme: ");
+  scanf("%d", &fi.classificacao_filme);
+
+  printf(
+      "\n Informe (0) se o filme não está disponível e (1) caso contrário: ");
+  scanf("%d", &fi.esta_disponivel);
+
+  printf("\n Cliente: %s", cli.nome);
+  printf("\n Idade: %d anos", cli.idade);
+  printf("\n Classificação do filme: %d anos", fi.classificacao_filme);
+  printf("\n Está disponível: %d", fi.esta_disponivel);
+  printf("\n Filme pode ser locado pelo cliente: %d",
+         (fi.esta_disponivel) && (cli.idade >= fi.classificacao_filme));
+  printf("\n Anos restantes: %d\n", (cli.idade < fi.classificacao_filme) *
+                                      (fi.classificacao_filme - cli.idade));
+}
+```
