@@ -57,6 +57,14 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite sua idade: 40
+
+ Você já pode tirar sua carteira de Habilitação, você tem 18 ou mais anos!
+```
+
 - Agora, veremos a seguir, a **estrutura condicional composta**, que completa a nossa condição inicial com o comando else, que significa “se não”. Vejamos como fica a estrutura no fluxograma da figura - Fluxograma representando as funções *if* e *else*:
 
 ![image-20220611184239872](./01-tomada-de-decisoes.assets/image-20220611184239872.png)
@@ -89,6 +97,15 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite o valor do orcamento para viagem 
+100000
+
+ João e Maria possuem orçamento para uma viagem internacional
+```
+
 - Para reforçar o seu conhecimento, vamos ver o exemplo que segue em linguagem de programação *C*, que retorna se o valor de um número digitado é par ou ímpar, representando uma estrutura condicional composta. Além disso, aplicaremos o operador aritmético módulo (%).
 
 
@@ -106,6 +123,15 @@ int main() {
   }
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ Digite um número inteiro:
+4
+
+ O número é par
 ```
 
 - Sabemos que todo número par é divisível por 2; isso significa que ao dividirmos esse número por 2, o resto será zero. Sabemos, ainda, que o operador módulo (%) nos devolve o resto da divisão inteira entre dois números.
@@ -179,6 +205,19 @@ int main(void){
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+(1) para Saldo
+(2) para Extrato
+(3) para Saque
+(4) para Sair
+
+Informe a operação desejada: 1
+
+Saldo
+```
+
 - Para fixar o que está sendo estudado, vamos aplicar, a seguir, um exemplo cuja finalidade é descobrir o desconto que um cliente terá, de acordo com a escolha de uma cor específica marcada em cada produto:
 
 
@@ -220,6 +259,21 @@ int main() {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+Digite o valor da compra: 100
+
+Digite a letra que representa o seu desconto de acordo com a cor: 
+a. azul
+v. vermelho
+b. branco
+Digite sua opção: a
+
+Você escolheu a cor azul, seu desconto será de 30 por cento!
+O valor da sua compra é R$ 70.00
 ```
 
 ---
@@ -268,6 +322,14 @@ int main(void) {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+Informe a nota final do aluno: 40
+
+Reprovado
+```
+
 - Uma forma alternativa e mais apropriada de se programar o código apresentado é usar a estrutura *else if*. Com essa estrutura, você evita encadeamentos muito profundos, tornando o código mais fácil de ler, entender e manter.
 - Veja como ficaria o código do programa que analisa a situação de um aluno, de acordo com sua nota final, usando a estrutura *else if*.
 
@@ -287,6 +349,14 @@ int main(void) {
     printf("\nReprovado\n");
   }
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+Informe a nota final do aluno: 60
+
+Aprovado
 ```
 
 ---
@@ -340,5 +410,16 @@ int main() {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+Cálculo de Salário Líquido com desconto do IR e INSS
+Digite seu salário bruto: 14000
+
+Desconto INSS: R$ 1960.00
+Desconto IR: R$ 3850.00
+Salário líquido: R$ 8190.00
 ```
 

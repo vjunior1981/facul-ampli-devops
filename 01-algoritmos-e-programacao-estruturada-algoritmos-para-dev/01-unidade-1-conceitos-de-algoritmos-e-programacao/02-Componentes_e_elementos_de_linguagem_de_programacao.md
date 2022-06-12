@@ -84,6 +84,7 @@ int main(){
 ![image-20220605161421695](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220605161421695.png)
 
 - Vamos utilizar a ferramenta Paiza.io para testar as declarações das variáveis e a impressão de cada uma delas.
+- Nota: estou usando o [replit.com](replit.com)
 
 ```c
 #include <stdio.h>
@@ -104,6 +105,18 @@ int main() {
   return 0;
 }
 ```
+
+- ***<u>Output:</u>***
+
+```
+ Idade: 18
+ Salário: 1250.750000
+ Desconto (%): 2.500000
+ Gênero: F
+ Altura: 1.630
+```
+
+
 
 ---
 
@@ -139,6 +152,17 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite o primeiro valor..: 2.3
+
+ Digite o segundo valor...: 5
+
+ Variável 1 = 2.30
+ Variável 2 = 5.00
+```
+
 - Para impressão do endereço da variável é necessário utilizar o operador `&` junto do especificador de formato `"%p"`:
 
 ```c
@@ -158,23 +182,40 @@ int main(void) {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+Address of a: 0x7ffee069702c
+Address of b: 0x7ffee0697028
+Address of c: 0x7ffee0697027
+```
+
 - Impressão de variáveis recebidas
 
 ```c
 #include <stdio.h>
 
-int main(void) {
-  // declare variables
-  int a;
-  float b;
-  char c;
+int main() {
+  float valor1 = 0, valor2 = 0;
 
-  printf("Address of a: %p\n", &a);
-  printf("Address of b: %p\n", &b);
-  printf("Address of c: %p\n", &c);
-
-  return 0;
+  printf("\n Digite o primeiro valor: ");
+  scanf("%f", &valor1);
+  printf("\n Digite o segundo valor: ");
+  scanf("%f", &valor2);
+  printf("\n Variavel 1 = %.2f", valor1);
+  printf("\n Variavel 2 = %.2f\n", valor2);
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ Digite o primeiro valor: 1.2
+
+ Digite o segundo valor: 3.9
+
+ Variavel 1 = 1.20
+ Variavel 2 = 3.90
 ```
 
 - Declara-se uma constante utilizando a diretiva `#define`, logo após a inclusão das bibliotecas. Ex:
@@ -206,6 +247,13 @@ int main() {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ PI = 3.140000
+ G  = 9.800000
 ```
 
 ---
@@ -252,6 +300,16 @@ int main() {
 }
 ```
 
+* ***<u>Output:</u>***
+
+```
+ Exemplo 1:
+
+ Vetor altura[0] = 1.000000
+ Vetor altura[1] = 1.500000
+ Vetor altura[2] = 1.700000
+```
+
 * Também é possível declarar o vetor e seus valores conforme a forma abaixo:
 
 ```c
@@ -270,6 +328,16 @@ int main() {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ Exemplo 2:
+
+ Vetor altura[0] = 1.500000
+ Vetor altura[1] = 1.800000
+ Vetor altura[2] = 2.020000
 ```
 
 - Para ajudar a compreensão, observe a figura a seguir, que representa um esquema para um vetor denominado *idade* na memória do computador. O valor do vetor depende da posição, ou seja, do índice.
@@ -304,6 +372,18 @@ int main(void) {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ Informe a idade da pessoa 1: 40
+
+ Informe a idade da pessoa 2: 33
+
+ Informe a idade da pessoa 3: 2
+
+ Média de idade = 25.00
 ```
 
 ---
@@ -416,6 +496,12 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+sem output
+```
+
 - A figura a seguir ilustra a estrutura de dados que é criada na memória para o código do código - Matriz em C. Veja que as linhas foram usadas para representar os alunos e as colunas para as notas.
 
 ![image-20220611160141669](./02-Componentes_e_elementos_de_linguagem_de_programacao.assets/image-20220611160141669.png)
@@ -481,6 +567,21 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite o modelo do automovel: Ferrari
+
+ Digite o ano do automovel: 2022
+
+ Digite o valor do automovel: 1000000
+
+ Dados atribuidos
+ Ferrari
+ 2022
+ 1000000.000000
+```
+
 ---
 
 
@@ -535,6 +636,13 @@ int main() {
 
   return 0;
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ Utilizando índice do vetor: 10
+ Utilizando ponteiro: 10
 ```
 
 - Link para essa solução no replit.com [aqui](Link para essa solução no replit.com [aqui](https://replit.com/@vjunior1981/ampli-devops-criacao-de-constantes?v=1).
@@ -601,3 +709,20 @@ int main(void) {
   printf("\n Classificação do filme: %d anos\n", classificacao_filme);
 }
 ```
+
+- ***<u>Output:</u>***
+
+```
+ Informe o nome do cliente: Vitor
+
+ Informe a idade do cliente: 40
+
+ Informe a classificação do filme: 21
+
+ Cliente: Vitor
+
+ Idade: 40 anos
+
+ Classificação do filme: 21 anos
+```
+

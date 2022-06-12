@@ -48,6 +48,16 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite a primeira idade: 40
+
+ Digite a segunda idade: 33
+
+ Resultado = 73
+```
+
 - Quando trabalhamos com operadores, a **ordem de precedência** é muito importante. Segundo Soffner (2013), os operadores aritméticos apresentam a seguinte ordem de execução:
 
 ![image-20220611170535134](./03-Operacoes_e_expressoes.assets/image-20220611170535134.png)
@@ -61,6 +71,12 @@ int main() {
   int resultado = 43 % 3;
   printf("Operacao modulo 43 % 3 = %d\n", resultado);
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+Operacao modulo 43 % 3 = 1
 ```
 
 - Veja na figura – Operação aritmética módulo –, o cálculo matemático que é efetuado e como o resultado é obtido, você terá o resultado correto? Se for um cálculo para o setor financeiro de uma empresa, seu cálculo mostraria lucro ou prejuízo?
@@ -103,6 +119,15 @@ int main(void) {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Resultado = 0
+ X = 1
+ Resultado = 1
+ Y = 1
+```
+
 ---
 
 
@@ -132,6 +157,18 @@ int main() {
 }
 ```
 
+- ***<u>Output:</u>***
+
+```
+ Digite o primeiro numero: 10
+
+ Digite o segundo numero: 25
+
+ n1 e n2 sao iguais? 0
+ n1 e maior que n2? 0
+ n1 e menor ou igual a n2? 1
+```
+
 ---
 
 
@@ -153,6 +190,15 @@ int main() {
   printf("\n (a == b) || (a == ¢) = %d", ((a == b) || (a == c)));
   printf("\n !(a == b) || (a == c) = %d\n", !((a == b) || (a == c)));
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ (a == b) && (a == c) = 0
+ (a == b) || (a == ¢) = 0
+ !(a == b) || (a == c) = 1
+
 ```
 
 ---
@@ -183,6 +229,14 @@ int main(void) {
   printf("\n ARARA == BANANA? %d", strcmp("ARARA", "BANANA"));
   printf("\n BANANA == ARARA? %d\n", strcmp("BANANA", "ARARA"));
 }
+```
+
+- ***<u>Output:</u>***
+
+```
+ ARARA == ARARA? 0
+ ARARA == BANANA? -1
+ BANANA == ARARA? 1
 ```
 
 ---
@@ -221,7 +275,22 @@ int main(void) {
   printf("\n Idade: %d anos\n", cli.idade);
   printf("\n Classificação do filme: %d anos\n", classificacao_filme);
 }
+```
 
+- ***<u>Output:</u>***
+
+```
+ Informe o nome do cliente: Vitor
+
+ Informe a idade do cliente: 40
+
+ Informe a classificação do filme: 21
+
+ Cliente: Vitor
+
+ Idade: 40 anos
+
+ Classificação do filme: 21 anos
 ```
 
 - Uma das novas funcionalidades propostas por seu chefe é que o programa informe ao cliente se o filme desejado está disponível para ser locado ou não. Nós já temos uma informação a respeito do filme, que é sua classificação. Então, para que nosso código fique organizado, vamos criar uma *struct* denominada Filme, assim como fizemos com o cliente.
@@ -294,3 +363,24 @@ int main(void) {
                                       (fi.classificacao_filme - cli.idade));
 }
 ```
+
+- ***<u>Output:</u>***
+
+```
+ Informe o nome do cliente: Vitor
+
+ Informe a idade do cliente: 40
+
+ Informe a classificação do filme: 21
+
+ Informe (0) se o filme não está disponível e (1) caso contrário: 1
+
+ Cliente: Vitor
+
+ Idade: 40 anos
+ Classificação do filme: 21 anos
+ Está disponível: 1
+ Filme pode ser locado pelo cliente: 1
+ Anos restantes: 0
+```
+
