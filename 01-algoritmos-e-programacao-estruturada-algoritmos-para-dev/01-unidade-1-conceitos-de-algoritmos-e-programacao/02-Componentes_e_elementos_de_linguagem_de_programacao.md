@@ -659,7 +659,13 @@ int main() {
 
 
 
-## Vídeoaula: Exercício algoritmos
+## Vídeoaula: Variáveis
+
+---
+
+
+
+## Vídeoaula: Exercício linguagem de programação
 
 - Verdadeiro ou Falso?
 

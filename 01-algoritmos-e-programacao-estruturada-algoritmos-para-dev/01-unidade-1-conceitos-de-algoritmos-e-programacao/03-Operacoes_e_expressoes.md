@@ -243,6 +243,18 @@ int main(void) {
 
 
 
+## Vídeoaula: Linguagem C
+
+---
+
+
+
+## Vídeoaula: Operações e Expressões em C
+
+---
+
+
+
 ## Conclusão
 
 - Para ampliar sua visão acerca das possibilidades de aplicação dos conhecimentos obtidos até o momento, vamos retomar a situação-problema: Seu chefe solicitou que você aprimore um programa que vem sendo desenvolvido na empresa onde trabalha. Vamos então recordar o que já sabemos?

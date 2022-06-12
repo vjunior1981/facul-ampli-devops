@@ -363,6 +363,12 @@ Aprovado
 
 
 
+## Vídeoaula: Estrutura de Decisão e Repetição
+
+---
+
+
+
 ## Conclusão
 
 - Agora que você já conhece as estruturas de decisão condicional, chegou o momento de verificar se realmente o seu funcionário (ex-estagiário) conseguiu resolver o programa em linguagem *C*, que calcula o valor do salário líquido, levando em consideração os descontos de INSS e Imposto de Renda.

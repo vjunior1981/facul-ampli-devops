@@ -293,6 +293,12 @@ M E N U   D E  O P Ç Õ E S
 
 
 
+## Vídeoaula: Estrutura de Repetição Condicional
+
+---
+
+
+
 ## Conclusão
 
 - Para ampliar sua visão acerca das possibilidades de aplicação dos conhecimentos obtidos até o momento, vamos retomar a situação-problema apresentada anteriormente.
